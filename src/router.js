@@ -13,11 +13,19 @@ const Router = (() => {
 
   const addEventListeners = () => {
     window.addEventListener("popstate", render);
+
+    const matchList = location.hash.match(/#\//);
+
+    if (!matchList) {
+      location.hash += "#/";
+    }
   };
 
   const render = () => {
     routes.forEach(route => {
-      if (route.path == location.pathname) {
+      const locationName = location.hash.replace("#", "");
+
+      if (route.path == locationName) {
         rootElement.innerHTML = route.page.render();
       }
     });

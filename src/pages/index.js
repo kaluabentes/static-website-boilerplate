@@ -1,5 +1,7 @@
+import Header from "_components/header";
+
 const Index = (() => {
-  const render = () => `<h1>Hello world</h1>`;
+  const render = () => Header.render();
 
   return {
     render

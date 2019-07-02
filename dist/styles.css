@@ -1,3 +1,36 @@
+.header--jo_Uz {
+  background: #282b36;
+  color: #4cfa7a;
+  height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.title--ikBKP {
+  margin: 0;
+  font-weight: normal;
+  font-size: 59px;
+  margin-bottom: 20px;
+}
+
+.subtitle--2-UZQ {
+  margin: 0;
+  font-weight: normal;
+  font-size: 30px;
+  color: #87e9fd;
+}
+
+.greet--3epDA {
+  color: #7546ae;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -349,7 +382,7 @@ template {
 }
 
 :root {
-  --font-face: sans-serif;
+  --font-face: "Source Code Pro", monospace;
   --color-primary: #ea1c2b;
   --color-white: #fff;
 }

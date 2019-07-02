@@ -1,0 +1,27 @@
+.header {
+  background: #282b36;
+  color: #4cfa7a;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 59px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  margin: 0;
+  font-weight: normal;
+  font-size: 30px;
+  color: #87e9fd;
+}
+
+.greet {
+  color: #7546ae;
+}

@@ -26,7 +26,13 @@ module.exports = {
           process.env.NODE_ENV !== "production"
             ? "style-loader"
             : MiniCssExtractPlugin.loader,
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              localIdentName: "[local]--[hash:base64:5]"
+            }
+          },
           {
             loader: "postcss-loader",
             options: {
@@ -53,7 +59,8 @@ module.exports = {
   resolve: {
     alias: {
       _styles: path.resolve(__dirname, "src/styles"),
-      _pages: path.resolve(__dirname, "src/pages")
+      _pages: path.resolve(__dirname, "src/pages"),
+      _components: path.resolve(__dirname, "src/components")
     }
   }
 };
