@@ -1,5 +1,9 @@
 :root {
   --font-face: "Source Code Pro", monospace;
+
   --color-primary: #ea1c2b;
   --color-white: #fff;
+  --color-green: #4cfa7a;
+  --color-blue: #87e9fd;
+  --color-studio: #7546ae;
 }

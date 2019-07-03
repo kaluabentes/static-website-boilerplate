@@ -1,4 +1,9 @@
+/* Vendor */
 @import "normalize.css";
 
+/* Base */
 @import "./variables.css";
 @import "./global.css";
+
+/* Components */
+@import "./components/header.css";

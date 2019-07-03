@@ -1,0 +1,27 @@
+.header {
+  background: #282b36;
+  color: var(--color-green);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__title {
+    margin: 0;
+    font-weight: normal;
+    font-size: 59px;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: normal;
+    font-size: 30px;
+    color: var(--color-blue);
+  }
+
+  &__greet {
+    color: var(--color-studio);
+  }
+}
