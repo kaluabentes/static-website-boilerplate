@@ -308,8 +308,24 @@ body {
     font-weight: normal;
     font-size: 30px;
     color: var(--color-blue);
+    margin-bottom: 50px;
   }
 .header__greet {
     color: var(--color-studio);
   }
+.header__button {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--color-studio);
+    color: var(--color-studio);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+.header__button:focus,
+    .header__button:hover {
+      outline: none;
+      color: var(--color-green);
+      border-color: var(--color-green);
+      transform: translateY(3px);
+    }
 
