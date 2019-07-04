@@ -320,6 +320,7 @@ body {
     color: var(--color-studio);
     transition: 0.3s;
     cursor: pointer;
+    text-decoration: none;
   }
 .header__button:focus,
     .header__button:hover {
@@ -327,5 +328,14 @@ body {
       color: var(--color-green);
       border-color: var(--color-green);
       transform: translateY(3px);
+    }
+.header__bio {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 0 40px 0;
+    color: var(--color-white);
+  }
+.header__bio p {
+      line-height: 25px;
     }
 

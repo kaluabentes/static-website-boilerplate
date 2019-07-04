@@ -1,6 +1,11 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin");
+const fs = require("fs");
+const md = require("markdown-it")();
+
+const bioMarkdown = fs.readFileSync("./src/content/bio.md", "utf-8");
+const bioHTML = md.render(bioMarkdown);
 
 const isDevEnv = () => {
   if (process.env.NODE_ENV === "production") {
@@ -44,14 +49,30 @@ module.exports = {
       filename: "styles.css"
     }),
     new NunjucksWebpackPlugin({
+      configure: {
+        options: {
+          autoescape: false
+        }
+      },
       templates: [
         {
           from: "src/views/index.njk",
-          to: "index.html"
+          to: "index.html",
+          context: {
+            name: "Kaluã Bentes"
+          }
         },
         {
           from: "src/views/bio.njk",
-          to: "bio.html"
+          to: "bio.html",
+          context: {
+            bio: bioHTML
+          },
+          configure: {
+            options: {
+              autoescape: false
+            }
+          }
         }
       ]
     })
