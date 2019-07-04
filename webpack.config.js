@@ -1,6 +1,6 @@
 const path = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin");
 
 const isDevEnv = () => {
   if (process.env.NODE_ENV === "production") {
@@ -40,15 +40,26 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "styles.css"
+    }),
+    new NunjucksWebpackPlugin({
+      templates: [
+        {
+          from: "src/views/index.njk",
+          to: "index.html"
+        },
+        {
+          from: "src/views/bio.njk",
+          to: "bio.html"
+        }
+      ]
     })
   ],
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/dist/"
+    path: path.resolve(__dirname),
+    publicPath: "/"
   },
   resolve: {
     alias: {
