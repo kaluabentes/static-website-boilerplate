@@ -14,8 +14,8 @@ module.exports = {
       importFrom: [
         {
           customMedia: {
-            "--break-mobile": "(max-width: 767px)",
-            "--break-desktop": "(min-width: 768px)"
+            "--mobile": "(max-width: 767px)",
+            "--desktop": "(min-width: 768px)"
           }
         }
       ]
