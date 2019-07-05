@@ -2,16 +2,19 @@
   background: #282b36;
   color: var(--color-green);
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  overflow: auto;
 
   &__title {
     margin: 0;
     font-weight: normal;
     font-size: 59px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: left;
+
+    @media (--desktop) {
+      text-align: center;
+    }
   }
 
   &__subtitle {
@@ -19,7 +22,13 @@
     font-weight: normal;
     font-size: 30px;
     color: var(--color-blue);
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: left;
+
+    @media (--desktop) {
+      text-align: center;
+    }
   }
 
   &__greet {
@@ -34,6 +43,14 @@
     transition: 0.3s;
     cursor: pointer;
     text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+
+    @media (--desktop) {
+      width: initial;
+      margin: 10px;
+    }
 
     &:focus,
     &:hover {
@@ -52,6 +69,17 @@
 
     & p {
       line-height: 25px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (--desktop) {
+      flex-direction: row;
+      justify-content: center;
     }
   }
 }
