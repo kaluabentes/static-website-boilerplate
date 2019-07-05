@@ -7,3 +7,5 @@
 
 /* Components */
 @import "./components/header.css";
+@import "./components/layout.css";
+@import "./components/nav.css";
