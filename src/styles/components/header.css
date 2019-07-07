@@ -4,17 +4,18 @@
   height: 100vh;
   overflow: auto;
 
+  @media (--desktop) {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
   &__title {
     margin: 0;
     font-weight: normal;
     font-size: 59px;
     margin-bottom: 30px;
     width: 100%;
-    text-align: left;
-
-    @media (--desktop) {
-      text-align: center;
-    }
   }
 
   &__subtitle {
@@ -24,11 +25,6 @@
     color: var(--color-blue);
     margin-bottom: 40px;
     width: 100%;
-    text-align: left;
-
-    @media (--desktop) {
-      text-align: center;
-    }
   }
 
   &__greet {
@@ -46,10 +42,11 @@
     width: 100%;
     margin-bottom: 15px;
     text-align: center;
+    display: block;
 
     @media (--desktop) {
+      display: inline-block;
       width: initial;
-      margin: 10px;
     }
 
     &:focus,
@@ -62,24 +59,12 @@
   }
 
   &__bio {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 0 40px 0;
+    margin-bottom: 40px;
     color: var(--color-white);
 
     & p {
+      margin: 0;
       line-height: 25px;
-    }
-  }
-
-  &__nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    @media (--desktop) {
-      flex-direction: row;
-      justify-content: center;
     }
   }
 }
