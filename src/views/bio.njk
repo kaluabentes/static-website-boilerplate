@@ -2,11 +2,13 @@
 
 {% block main %}
   <header class="header">
-    <h1 class="header__title">
-      Who am <span class="header__greet">I?</span>
-    </h1>
-    <h2 class="header__subtitle">Please allow me to introduce myself</h2>
-    <div class="header__bio">{{ bio }}</div>
-    <a href="/" class="header__button">Return to index.html</a>
+    <div class="container">
+      <h1 class="header__title">
+        Who am <span class="header__greet">I?</span>
+      </h1>
+      <h2 class="header__subtitle">Please allow me to introduce myself</h2>
+      <div class="header__bio">{{ bio }}</div>
+      <a href="/" class="header__button">Return to index.html</a>
+    </div>
   </header>
 {% endblock %}
