@@ -1,6 +1,6 @@
-# Kalu.dev
+# Static Website Boilerplate
 
-The source code of my personal website
+Develop static websites compiled by Webpack.
 
 ## How to run locally
 
