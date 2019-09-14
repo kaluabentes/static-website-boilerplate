@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin");
 const fs = require("fs");
 const md = require("markdown-it")();
+const routesConfig = require("./src/config/routes");
 
 const bioMarkdown = fs.readFileSync("./src/content/bio.md", "utf-8");
 const bioHTML = md.render(bioMarkdown);
@@ -52,27 +53,7 @@ module.exports = {
           autoescape: false
         }
       },
-      templates: [
-        {
-          from: "src/views/index.njk",
-          to: "index.html",
-          context: {
-            name: "Kaluã Bentes"
-          }
-        },
-        {
-          from: "src/views/bio.njk",
-          to: "bio.html",
-          context: {
-            bio: bioHTML
-          },
-          configure: {
-            options: {
-              autoescape: false
-            }
-          }
-        }
-      ]
+      templates: routesConfig
     })
   ],
   output: {
